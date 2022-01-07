@@ -1,0 +1,8 @@
+version: 1
+imports: []
+schemas:
+  - id: aws
+    title: aws
+    parent: root
+    children:
+      - pattern: '*'
