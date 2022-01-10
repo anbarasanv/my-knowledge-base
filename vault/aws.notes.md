@@ -2,7 +2,7 @@
 id: nB07pGrpa83cjwp8Y8k5l
 title: Notes
 desc: ''
-updated: 1641712276462
+updated: 1641733231143
 created: 1641517368441
 ---
 
@@ -81,3 +81,28 @@ for i in ec2.instances.all():
 ```
 
 We can follow [this](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) doc for more use
+
+## Cloud Front
+
+It's a CDN which can mirror the S3 buckets, the use case would be serving the customers based on their nearby locations.
+
+## VPC: Virtual Private Network
+
+It's a set of rules that allows the AWS instance contact each other using a private network connectivity, without connecting to the public network.
+![AWS VPC Example](/assets/images/2022-01-09-12-56-51.png)
+
+## NAT: Network Address Translation
+
+It's a mechanism used for accessing the public internet from a private network securely.
+![NAT](/assets/images/2022-01-09-13-09-09.png)
+
+## Internet Gateway
+
+It's allows public servers to serve the clients on the internet. AWS instance has this public IP to serve but, when an instance has been rebooted it will return the old IP to the pool and assigns the new public IP to the instance.
+
+![Internet Gateway](/assets/images/2022-01-09-13-25-01.png)
+
+
+## ELB: Elastic Load Balancer
+
+This helps to transmit the server traffics among the healthy servers.
