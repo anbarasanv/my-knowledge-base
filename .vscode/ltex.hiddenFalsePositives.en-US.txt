@@ -1,0 +1,2 @@
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QData analyst find answers to existing questions by creating insights from data sources.\\E$"}
+{"rule":"CD_NN","sentence":"^\\QFive Why's\nGap Analysis\\E$"}
