@@ -1,0 +1,11 @@
+version: 1
+imports: []
+schemas:
+- id: analytics
+  title: analytics
+  parent: root
+  children:
+    - googlecourse
+- id: googlecourse
+  title: googlecourse
+  pattern: "*"

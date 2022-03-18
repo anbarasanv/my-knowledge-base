@@ -27,6 +27,15 @@ schemas:
 - id: framework
   title: framework
   pattern: "*"
+  children:
+    - FastAPI
+    - ReactJS
 - id: core
   title: core
+  pattern: "*"
+- id: FastAPI
+  title: FastAPI
+  pattern: "*"
+- id: ReactJS
+  title: ReactJS
   pattern: "*"
