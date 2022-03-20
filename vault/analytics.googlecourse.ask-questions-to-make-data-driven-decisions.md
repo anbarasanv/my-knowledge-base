@@ -2,7 +2,7 @@
 id: 14szycnxirsoo3bn4jvlezq
 title: Ask Questions to Make Data Driven Decisions
 desc: ''
-updated: 1647568258546
+updated: 1647757717598
 created: 1647484057124
 ---
 ## Structured Thinking
@@ -41,4 +41,63 @@ Finding similar challenges faced by different entities and combining data insigh
 #### Finding patterns
 
 Using historical data to understand what happened in the past and is therefore likely to happen again.
+
+### SMART Framework
+
+- **Leading Question:** Leading to answer in certain way, like there is an answer which is already expected, which will not give the lot of insights to analyze.
+Ex: **This product is too expensive, isn’t it?**
+
+- **Closed-ended Question:** It's like kind of Yes or No answers, and we will not know much information using these type of questions. Ex: **Were you satisfied with the customer trial?**
+
+- **Vague questions:** Questions that aren’t specific or don’t provide context. Ex: **Does the tool work for you?**
+
+To ask a **SMART** question and get valuable data out of it, It should follow the below constraints in the questions.
+
+**S**pecific: Specific questions are simple, significant, and focused on a single topic or a few closely related ideas.
+
+**M**easurable: Measurable questions can be quantified and assessed.
+
+**A**ction-oriented: Action-oriented questions encourage change.
+
+**R**elevant: Relevant questions matter, are important, and have significance to the problem you're trying to solve.
+
+**T**ime-bound: Time-bound questions specify the time to be studied.
+
+> **Fairness** ensuring that your questions don't create or reinforce bias.
+
+### Examples of SMART Framework
+
+**_Problem Statement_**: What features do people look for when buying a new car?
+
+**Specific:** Does the question focus on a particular car feature?
+
+**Measurable:** Does the question include a feature rating system?
+
+**Action-oriented:** Does the question influence creation of different or new feature packages?
+
+**Relevant:** Does the question identify which features make or break a potential car purchase?
+
+**Time-bound:** Does the question validate data on the most popular features from the last three years?
+
+Questions should be open-ended. This is the best way to get responses that will help you accurately qualify or disqualify potential solutions to your specific problem. So, based on the thought process, possible SMART questions might be:
+
+- On a scale of 1-10 (with 10 being the most important) how important is your car having four-wheel drive?
+
+- What are the top five features you would like to see in a car package?
+
+- What features, if included with four-wheel drive, would make you more inclined to buy the car?
+
+- How much more would you pay for a car with four-wheel drive?
+
+- Has four-wheel drive become more or less popular in the last three years?
+
+You can apply the SMART framework to all types of questions. The type of questions you ask can help you explore deeper with your data. Consider the ways your questions help you examine objectives, audience, time, security, and resources.
+
+Some common topics for questions include:
+
+- **Objectives:** What are the goals of the deep dive? What, if any, questions are expected to be answered by this deep dive?
+- **Audience:** Who are the stakeholders? Who is interested or concerned about the results of this deep dive? Who is the audience for the presentation?
+- **Time:** What is the time frame for completion? By what date does this need to be done?
+- **Resources:** What resources are available to accomplish the deep dive's goals?
+- **Security:** Who should have access to the information?
 
