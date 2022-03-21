@@ -2,14 +2,14 @@
 id: 14szycnxirsoo3bn4jvlezq
 title: Ask Questions to Make Data Driven Decisions
 desc: ''
-updated: 1647757717598
+updated: 1647830694362
 created: 1647484057124
 ---
 ## Structured Thinking
 
 > The process of recognizing the current problem or situation, organizing available information, revealing gaps and opportunities, and identifying the operations.
 
-### Common problem types
+## Common problem types
 
 1. Making predictions
 2. Categorizing things
@@ -18,31 +18,31 @@ created: 1647484057124
 5. Discovering connections
 6. Finding patterns
 
-#### Making predictions
+### Making predictions
 
 Using data to make an informed decision about how things may be in the future.
 
-#### Categorizing things
+### Categorizing things
 
 Assigning information to different groups or clusters based on common features.
 
-#### Spotting something unusual
+### Spotting something unusual
 
 Identifying data that is different from the norm.
 
-#### Identifying themes
+### Identifying themes
 
 Grouping categorized information into broader concepts.
 
-#### Discovering connections
+### Discovering connections
 
 Finding similar challenges faced by different entities and combining data insights to address them.
 
-#### Finding patterns
+### Finding patterns
 
 Using historical data to understand what happened in the past and is therefore likely to happen again.
 
-### SMART Framework
+## SMART Framework
 
 - **Leading Question:** Leading to answer in certain way, like there is an answer which is already expected, which will not give the lot of insights to analyze.
 Ex: **This product is too expensive, isn’t it?**
@@ -65,7 +65,7 @@ To ask a **SMART** question and get valuable data out of it, It should follow th
 
 > **Fairness** ensuring that your questions don't create or reinforce bias.
 
-### Examples of SMART Framework
+## Examples of SMART Framework
 
 **_Problem Statement_**: What features do people look for when buying a new car?
 
@@ -101,3 +101,46 @@ Some common topics for questions include:
 - **Resources:** What resources are available to accomplish the deep dive's goals?
 - **Security:** Who should have access to the information?
 
+## How data empowers decisions
+
+We make decision based on two ways as below:
+
+**Data-driven** decision-making: making decisions based on the supportive data, like choosing a restaurant based on the ratings.
+
+**Data-inspired** decision-making: Explores different data source to find out for what they have in common.
+
+## Quantitative and Qualitative data
+
+**Quantitative** data: Specific and objective measures of numerical facts. These are thinks that can be measured, and it can be helpful to answer **What** questions.
+
+**Qualitative** data: Subjective or explanatory measures of qualities and characteristics. There are thinks that con't be measured, It can be helpful to answer **Why** questions.
+
+## Sharing Data
+
+**Report:** Static collection of data given stakeholders periodically.
+
+_Pros:_
+
+- High-level historical data
+- Easy to design
+- pre-cleaned and sorted data
+
+_Cons:_
+
+- Continual maintenance
+- Less visually appealing
+- Static
+
+**Dashboard:** Monitors live incoming data
+
+_Pros:_
+
+- Dynamic, automatic, and interactive
+- More stakeholder access
+- Low maintenance
+
+_Cons:_
+
+- Labor-intensive design
+- Can be confusing
+- Potentially uncleaned data
