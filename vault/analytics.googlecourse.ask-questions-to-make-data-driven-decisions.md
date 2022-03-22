@@ -2,7 +2,7 @@
 id: 14szycnxirsoo3bn4jvlezq
 title: Ask Questions to Make Data Driven Decisions
 desc: ''
-updated: 1647830694362
+updated: 1647912578539
 created: 1647484057124
 ---
 ## Structured Thinking
@@ -144,3 +144,24 @@ _Cons:_
 - Labor-intensive design
 - Can be confusing
 - Potentially uncleaned data
+
+## Mathematical thinking
+
+### Small data
+
+- Specific
+- Short time-period
+- Day-to-day decisions
+
+### Big data
+
+- Longer and less specific
+- Long time-period
+- Big decisions
+
+### The three (or four) V words for big data
+
+Volume | Variety | Velocity | Veracity
+-------|---------|----------|---------
+The amount of data | The different kinds of data | How fast the data can be processed | The quality and reliability of the data
+
