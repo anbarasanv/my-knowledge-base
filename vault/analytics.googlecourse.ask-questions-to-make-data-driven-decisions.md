@@ -2,7 +2,7 @@
 id: 14szycnxirsoo3bn4jvlezq
 title: Ask Questions to Make Data Driven Decisions
 desc: ''
-updated: 1647912578539
+updated: 1648000208702
 created: 1647484057124
 ---
 ## Structured Thinking
@@ -165,3 +165,29 @@ Volume | Variety | Velocity | Veracity
 -------|---------|----------|---------
 The amount of data | The different kinds of data | How fast the data can be processed | The quality and reliability of the data
 
+## spreadsheet functions and errors
+
+[Formulas and functions](https://support.microsoft.com/en-us/office/formulas-and-functions-294d9486-b332-48ed-b489-abe7d0f9eda9?ui=en-US&rs=en-US&ad=US#id0eaabaaa=errors&ID0EBBD=Formulas)
+
+[Excel functions (by category)](https://support.microsoft.com/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb)
+
+### Problem domain
+
+The specific area of analysis that encompasses every activity affecting or affected by the problem.
+
+### Structured thinking
+
+Structured thinking is the process of recognizing the current problem or situation, organizing available information, revealing gaps and opportunities, and identifying the options.
+
+### Scope of Work(SOW)
+
+A scope of work or SOW is an agreed- upon outline of the work you're going to perform on a project.
+
+- Deliverables
+- Timeline
+- Milestones
+- Reports
+
+### Context
+
+The context is the condition in which something exists or happens.
