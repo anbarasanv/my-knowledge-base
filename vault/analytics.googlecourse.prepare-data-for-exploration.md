@@ -200,3 +200,84 @@ Wide data is preferred when | Long data is preferred when
  Creating tables and charts with a few variables about each subject | Storing a lot of variables about each subject. For example, 60 years worth of interest rates for each bank
  Comparing straightforward line graphs | Performing advanced statistical analysis or graphing
 
+### Bias
+
+A preference in favor of or against a person, group of people, or thing.
+
+### Data bias
+
+A type of error that systematically skews results in a certain direction.
+
+### Sampling bias
+
+When a sample isn't representative of the population as a whole.
+
+### Unbiased sampling
+
+When a sample is representative of the population being measured.
+
+### Observer bias (experimenter bias / research bias)
+
+The tendency for different people to observe things differently.
+
+### Interpretation bias
+
+The tendency to always interpret ambiguous situations in a positive or negative way.
+
+### Confirmation bias
+
+The tendency to search for or interpret information in a way that confirms pre-existing beliefs.
+
+### Identifying good data sources
+
+- **R**eliable
+- **O**riginal
+- **C**omprehensive
+- **C**urrent
+- **C**ited
+
+> "Every good solution is found by avoiding bad data"
+
+## Ethics of data
+
+### Ethics
+
+Well-founded standards of right and wrong that prescribe what humans ought to do, usually in terms of rights, obligations, benefits to society fairness, or specific virtues.
+
+### Data Ethics
+
+Well-founded standards of right and wrong that dedicate how data is collected, shared, and used.
+
+### Ownership
+
+Individuals own the raw data they provide, and they have primary control over its usage, how it's processed, and how it's shared.
+
+### Transaction transparency
+
+All data-processing activities and algorithms should be completely explainable and should be completely explainable and understood by the individual who provides their data.
+
+### Consent
+
+An individual's right to know explicit details about how and why their data will be used before agreeing to provide it.
+
+### Currency
+
+Individuals should be aware of financial transactions resulting from the use of their personal data and the scale of these transactions.
+
+### Privacy (data protection)
+
+Preserving a data subject's information and activity any time a data transaction occurs.
+
+- Protecting from unauthorized access to our private data
+- Freedom from inappropriate use of our data
+- The right to inspect, update, or correct our data
+- Ability to give consent to use our data
+- Legal right to access the data
+
+### Sites and resources for open data
+
+1. [U.S. government data site](https://www.data.gov/): Data.gov is one of the most comprehensive data sources in the US. This resource gives users the data and tools that they need to do research, and even helps them develop web and mobile applications and design data visualizations.
+2. [U.S. Census Bureau](https://www.census.gov/data.html): This open data source offers demographic information from federal, state, and local governments, and commercial entities in the U.S. too.
+3. [Open Data Network](https://www.opendatanetwork.com/): This data source has a really powerful search engine and advanced filters. Here, you can find data on topics like finance, public safety, infrastructure, and housing and development.
+4. [Google Cloud Public Datasets](https://cloud.google.com/public-datasets): There are a selection of public datasets available through the Google Cloud Public Dataset Program that you can find already loaded into BigQuery.
+5. [Dataset Search](https://datasetsearch.research.google.com/): The Dataset Search is a search engine designed specifically for data sets; you can use this to search for specific data sets.
