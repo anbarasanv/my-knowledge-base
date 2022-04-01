@@ -1,0 +1,8 @@
+version: 1
+imports: []
+schemas:
+  - id: uml
+    title: uml
+    parent: root
+    children:
+      - pattern: '*'

@@ -281,3 +281,30 @@ Preserving a data subject's information and activity any time a data transaction
 3. [Open Data Network](https://www.opendatanetwork.com/): This data source has a really powerful search engine and advanced filters. Here, you can find data on topics like finance, public safety, infrastructure, and housing and development.
 4. [Google Cloud Public Datasets](https://cloud.google.com/public-datasets): There are a selection of public datasets available through the Google Cloud Public Dataset Program that you can find already loaded into BigQuery.
 5. [Dataset Search](https://datasetsearch.research.google.com/): The Dataset Search is a search engine designed specifically for data sets; you can use this to search for specific data sets.
+
+## Databases in data analytics
+
+### Relational database
+
+A database that contains a series of related tables that can be connected via their relationships.
+
+![The key to relational databases](/assets/images/2022-04-01-06-24-06.png)
+
+### Primary key
+
+An Identifier that references a column in which each value is unique.
+
+- Used to ensure data in a specific column is unique
+- Uniquely identifies a record in a relational database table
+- Only one primary key is allowed in a table
+- Cannot contain null or blank values
+
+### Foreign key
+
+A field within a table that is a primary key in another table.
+
+- A column or group of columns in a relational database table that provides a link between the data in two tables
+- Refers to the field in a table that's the primary key of another table
+- More than one foreign key is allowed to exist in a table.
+
+
