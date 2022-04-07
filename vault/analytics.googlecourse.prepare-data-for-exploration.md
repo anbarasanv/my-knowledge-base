@@ -307,4 +307,78 @@ A field within a table that is a primary key in another table.
 - Refers to the field in a table that's the primary key of another table
 - More than one foreign key is allowed to exist in a table.
 
+### Metadata
+
+> "Metadata is data about the data".
+
+Metadata is used in database management to help data analysts interpret the contents of the data within the database.
+
+### There common types of metadata
+
+- Descriptive
+- Structural
+- Administrative
+
+#### Descriptive
+
+Metadata that describes a piece of data and can be used to identify it at a later point in time.
+
+#### Structural
+
+Metadata that indicates how a piece of data is organized and whether it is part of one, or more than one, data collection.
+
+#### Administrative
+
+Metadata that indicates the technical source of a digital asset.
+
+### Elements of metadata
+
+**Title and description:** What is the name of the file or website you are examining? What type of content does it contain?
+
+**Tags and categories:** What is the general overview of the data that you have? Is the data indexed or described in a specific way?
+
+**Who created it and when:** Where did the data come from, and when was it created? Is it recent, or has it existed for a long time?
+
+**Who last modified it and when:** Were any changes made to the data?  If yes, were the modifications recent?
+
+**Who can access or update it:** Is this dataset public? Are special permissions needed to customize or modify the dataset?
+
+### Metadata repository
+
+A database specifically created to store metadata.
+
+**Metadata repositories:** make it easier and faster to bring together multiple source for data analysis.
+
+- Describe the state and location of the metadata
+- Describe the structure of the table inside
+- Describe how the data flows through the repository
+- Keep track of who accesses the metadata and when
+
+### Data governance
+
+A process to ensure the formal management of a company's data assets.
+
+### Exploring public datasets
+
+- [Datasets Google Cloud](https://cloud.google.com/public-datasets)
+- [Dataset Search](https://datasetsearch.research.google.com/)
+- [Kaggle](https://www.kaggle.com/datasets?utm_medium=paid&utm_source=google.com+search&utm_campaign=datasets&gclid=CjwKCAiAt9z-BRBCEiwA_bWv-L6PpACh6RzmrJjQjmNGCCE7kky1FCtc6Jf1qld-4NwDMYL0WsUyxBoCdwAQAvD_BwE)
+- [BigQuery public datasets | Google Cloud](https://cloud.google.com/bigquery/public-data)
+
+#### Public health datasets
+
+- [Data collections - WHO](https://www.who.int/data/collections)
+- [The Cancer Imaging Archive (TCIA) datasets | Cloud Healthcare API | Google Cloud](https://cloud.google.com/healthcare/docs/resources/public-datasets/tcia)
+- [1000 Genomes | Cloud Life Sciences Documentation | Google Cloud](https://cloud.google.com/life-sciences/docs/resources/public-datasets/1000-genomes)
+
+#### Public climate datasets
+
+- [National climatic data center](https://www.ncdc.noaa.gov/data-access/quick-links)
+- [Dataset Gallery | NOAA Climate.gov](https://www.climate.gov/maps-data/datasets)
+
+#### Public social-political datasets
+
+- [The State of the World's Children 2019 Statistical Tables - UNICEF DATA](https://data.unicef.org/resources/dataset/sowc-2019-statistical-tables/)
+- [CPS Tables](https://www.bls.gov/cps/tables.htm)
+- [The Stanford Open Policing Project](https://openpolicing.stanford.edu/)
 

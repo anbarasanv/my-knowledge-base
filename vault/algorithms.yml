@@ -1,0 +1,8 @@
+version: 1
+imports: []
+schemas:
+  - id: algorithms
+    title: algorithms
+    parent: root
+    children:
+      - pattern: '*'

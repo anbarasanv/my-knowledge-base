@@ -7,3 +7,5 @@
 {"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\QContinuous data Data that is measured and can have almost any numeric value Height of kids in third grade classes (52.5 inches, 65.7 inches), Runtime markers in a video, Temperature\nDiscrete data Data that is counted and has a limited number of values Number of people who visit a hospital on a daily basis (10, 20, 200), Room's maximum capacity allowed, Tickets sold in the current month\\E$"}
 {"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\QStructured data Data organized in a certain format, like rows and columns Expense reports, Tax returns, Store inventory\nUnstructured data Data that isn't organized in any easily identifiable manner Social media posts, Emails, Videos\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q3 Basic Data Modeling Techniques - ERD, UML and Data Dictionary - Dataedo Blog\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QDatasets Google Cloud\nDataset Search\nKaggle\nBigQuery public datasets | Google Cloud\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QCreational\nStructural\\E$"}
