@@ -2,7 +2,7 @@
 id: xesrjl7c0rhhtag0jjdbyvi
 title: Prepare Data for Exploration
 desc: ''
-updated: 1648258928874
+updated: 1649382080766
 created: 1648258928874
 ---
 
@@ -382,3 +382,19 @@ A process to ensure the formal management of a company's data assets.
 - [CPS Tables](https://www.bls.gov/cps/tables.htm)
 - [The Stanford Open Policing Project](https://openpolicing.stanford.edu/)
 
+### Best practices when organizing data
+
+- Work out and agree on file naming conventions early on in a project to avoid renaming files again and again.
+- Align your file naming with your team's or company's existing file-naming conventions.
+- Ensure that your file names are meaningful; consider including information like project name and anything else that will help you quickly identify (and use) the file for the right purpose.
+- Include the date and version number in file names; common formats are YYYYMMDD for dates and v## for versions (or revisions).
+- Create a text file as a sample file with content that describes (breaks down) the file naming convention and a file name that applies it.
+- Avoid spaces and special characters in file names. Instead, use dashes, underscores, or capital letters. Spaces and special characters can cause errors in some applications.
+
+### Data security
+
+Protecting data from unauthorized access or corruption by adopting safety measures.
+
+**Encryption:** uses a unique algorithm to alter data and make it unusable by users and applications that don’t know the algorithm. This algorithm is saved as a “key” which can be used to reverse the encryption; so if you have the key, you can still use the data in its original form.
+
+**Tokenization:** replaces the data elements you want to protect with randomly generated data referred to as a “token.” The original data is stored in a separate location and mapped to the tokens. To access the complete original data, the user or application needs to have permission to use the tokenized data and the token mapping. This means that even if the tokenized data is hacked, the original data is still safe and secure in a separate location.
