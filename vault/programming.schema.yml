@@ -1,0 +1,11 @@
+version: 1
+imports: []
+schemas:
+- id: programming
+  title: programming
+  parent: root
+  children:
+    - python
+- id: python
+  title: python
+  pattern: "*"

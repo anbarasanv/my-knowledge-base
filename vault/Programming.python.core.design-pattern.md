@@ -1,8 +1,8 @@
 ---
 id: khxu5xqcxi2rcuanehl87vu
-title: Design Pattern
+title: Deesign Pattern
 desc: ''
-updated: 1649300736805
+updated: 1649380329219
 created: 1648522082649
 ---
 
