@@ -153,7 +153,7 @@ class Dog:
 
 ```python
 class Cat:
-  """A simple dCatog class"""
+  """A simple Cat class"""
   def __init__(self, name):
     slef._name = name
 
