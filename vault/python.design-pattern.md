@@ -2,7 +2,7 @@
 id: khxu5xqcxi2rcuanehl87vu
 title: Design Pattern
 desc: ''
-updated: 1649646794384
+updated: 1649733429256
 created: 1648522082649
 ---
 
@@ -127,12 +127,12 @@ In the above **Cat** and **Dog** can inherit the attributes of **Pet**, but it w
 
 **Factory encapsulate object creation** that is factory is an object that is specialized in creating other object.
 
-### Problem
+### Factory problem situation
 
 - Uncertain in type of objects
 - Decision to be made in runtime regarding what classes to use.
 
-### Scenario
+### Factory problem Scenario
 
 A pet shop originally selling dogs only, now they want to sell cats too, and they want to describe their attributes too.
 
@@ -176,3 +176,30 @@ c = get_pet("cat")
 print(c.speak())
 # Output: Meow
 ```
+
+## Abstract Factory
+
+Abstract factory builds on factory pattern and it' useful when we are expecting the family of related objects at a given time but doesn't have to know which family it is until runtime.
+
+### Abstract Factory problem situation
+
+- The user expectations yields
+
+### Abstract Factory scenario
+
+A pet factory whose concrete factories include dog factory and cat factory. Both dog and cat factories produce dogs and cats, as well as related products, such as dog food and cat food.
+
+```mermaid
+classDiagram
+PetFactory <|-- CatFactory
+PetFactory <|-- DogFactory
+CatFactory <|-- Cat
+CatFactory <|-- CatFood
+DogFactory <|-- Dog
+DogFactory <|-- DogFood
+
+```
+
+We implement our abstract factory without using inheritance because Python is a dynamically typed language, and therefore does not require abstract classes.
+
+We implement our abstract factory without using inheritance because Python is a dynamically typed language, and therefore does not require abstract classes.
