@@ -2,7 +2,7 @@
 id: hzz8zbo5j4l0uxsfowtq3il
 title: Process Data from Dirty to Clean
 desc: ''
-updated: 1649730427234
+updated: 1649816701964
 created: 1649638993702
 ---
 > A strong analysis depends on the integrity of the data.
@@ -109,17 +109,25 @@ Ways to address insufficient data
 
 ### The importance of sample size
 
-**Population:** All possible data values in certain dataset
+### Population size
 
-**Sample size:** A part of population that is representative of the population
+All possible data values in certain dataset
+
+### Sample size
+
+A part of population that is representative of the population
 
 **Downside of the sample size:** When the population itself small, then the sample form that population might be less effective. This might lead to Sampling bias.
 
-**Sampling bias** A sample isn't representative of the population as a whole.
+### Sampling bias
+
+A sample isn't representative of the population as a whole.
+
+### Random sampling
 
 Using random sampling can reduce some issues with the sampling bias.
 
-**Random sampling:** A way of selecting a sample from a population so that every possible type of the sample has an equal chance of being chosen.
+A way of selecting a sample from a population so that every possible type of the sample has an equal chance of being chosen.
 
 | Terminology              | Definitions                                                                                                                                                                                                                                                                                                                                                                          |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -157,3 +165,49 @@ CSV, J​SON, SQLite, and BigQuery datasets
 - [You-tube-trends](https://www.kaggle.com/datasnaek/youtube-new)
 - [us-wildfires](https://www.kaggle.com/rtatman/188-million-us-wildfires)
 - [google-analytics-sample<](https://www.kaggle.com/bigquery/google-analytics-sample)
+
+### Determine the sample size
+
+### Confidence level
+
+The probability that your sample size accurately reflects the greater population.
+
+Having 99% confidence level is ideal, but most industries hope for at least a 90% or 95% confidence level.
+
+### Margin of error
+
+Margin of errors is the difference between the sample result and the population result.
+
+$$MOE_\gamma = z_\gamma \times \sqrt{\frac{\sigma^2}{n}}$$
+
+where $z_\gamma$ is the z-score, $n$ is the sample size, and $\sigma^2$ is the variance of the population.
+variance: $\sigma^2=\frac{\sum(x_i-\bar x)^2}{n-1}$
+
+The z-score is the difference between the sample result and the population result divided by the standard deviation of the population.
+
+$z=\frac{x-\mu}{\sigma}$
+
+where:
+μ is the mean of the population,
+σ is the standard deviation of the population.
+
+Calculating z using this formula requires use of the population mean and the population standard deviation, not the sample mean or sample deviation. However, knowing the true mean and standard deviation of a population is often an unrealistic expectation, except in cases such as standardized testing, where the entire population is measured.
+
+When the population mean and the population standard deviation are unknown, the standard score may be estimated by using the sample mean and sample standard deviation as estimates of the population values.
+
+$$z=\frac{x-\bar x}{\sigma}$$
+
+Where $x$ is the sample result, $\bar x$ is the population result, and $\sigma$ is the standard deviation of the population.
+
+### Estimated response rate
+
+If you are running a survey of individuals, this is the percentage of people you expect will complete your survey out of those who received the survey.
+
+### Sample size calculators
+
+In order to use a sample size calculator, you need to have the [[Sample size|analytics.googlecourse.process-data-from-dirty-to-clean#sample-size]], [[Confidence level|analytics.googlecourse.process-data-from-dirty-to-clean#confidence-level]], and the acceptable [[Margin of error|analytics.googlecourse.process-data-from-dirty-to-clean#margin-of-error]] already decided, so you can input them into the tool. If this information is ready to go, check out these sample size calculators below:
+
+- [Sample Size Calculator: Understanding Sample Sizes | SurveyMonkey](https://www.surveymonkey.com/mp/sample-size-calculator/)
+- [Sample Size Calculator by Raosoft, Inc.](http://www.raosoft.com/samplesize.html)
+
+After you have plugged your information into one of these calculators, it will give you a recommended sample size. Keep in mind, the calculated sample size is the minimum number to achieve what you input for confidence level and margin of error. If you are working with a survey, you will also need to think about the estimated response rate to figure out how many surveys you will need to send out. For example, if you need a sample size of 100 individuals and your estimated response rate is 10%, you will need to send your survey to 1,000 individuals to get the 100 responses you need for your analysis.

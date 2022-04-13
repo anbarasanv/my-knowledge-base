@@ -2,7 +2,7 @@
 id: khxu5xqcxi2rcuanehl87vu
 title: Design Pattern
 desc: ''
-updated: 1649733429256
+updated: 1649819745343
 created: 1648522082649
 ---
 
@@ -132,9 +132,11 @@ In the above **Cat** and **Dog** can inherit the attributes of **Pet**, but it w
 - Uncertain in type of objects
 - Decision to be made in runtime regarding what classes to use.
 
-### Factory problem Scenario
+### Factory Scenario
 
 A pet shop originally selling dogs only, now they want to sell cats too, and they want to describe their attributes too.
+
+### Factory method implementation
 
 ```python
 class Dog:
@@ -189,6 +191,8 @@ Abstract factory builds on factory pattern and it' useful when we are expecting 
 
 A pet factory whose concrete factories include dog factory and cat factory. Both dog and cat factories produce dogs and cats, as well as related products, such as dog food and cat food.
 
+### Abstract Factory Implementation
+
 ```mermaid
 classDiagram
 PetFactory <|-- CatFactory
@@ -202,4 +206,62 @@ DogFactory <|-- DogFood
 
 We implement our abstract factory without using inheritance because Python is a dynamically typed language, and therefore does not require abstract classes.
 
-We implement our abstract factory without using inheritance because Python is a dynamically typed language, and therefore does not require abstract classes.
+```python
+class Dog:
+  """One of the obhects to be returned"""
+  def speak(slef):
+    return "Woof!"
+
+  def __str__(self):
+    return "Dog"
+
+class DogFactory:
+  """Concrete factory"""
+  def get_pet(self):
+    """Returns a Dog object"""
+    return Dog()
+  def get_food(self):
+    """Returns a Dog Food object"""
+    return "Dog Food!"
+
+class PetStore:
+  """PetStore houses our Abstract Factory"""
+  def __init__(self, pet_factory=None):
+    """pet_factory is our Abstract Factory"""
+    self._pet_factory = pet_factory # concrete factory
+
+  def show_pet(self):
+    """Utility method to display the details of the objects returned by the DogFactory"""
+    pet = self._pet_factory.get_pet()
+    pet_food = self._pet_factory.get_food()
+    print("Our pet is '{}'!".format(pet))
+    print("Our pet says hello by '{}'".format(pet.speak()))
+    print("Its food is '{}'!".format(pet_food))
+
+# Create a Concrete Factory
+factory = DogFactory()
+
+# Create a pet store housing our Abstract Factory
+shop = PetStore(factory)
+
+# Invoke the utility method to show the details of our pet
+shop.show_pet()
+```
+
+## Singleton
+
+When we have a class that is supposed to have only one instance, we can use the singleton pattern to ensure that.
+
+### Singleton problem situation
+
+- Global variant in an object-oriented way
+- Borg
+  - The Borg class implements the Borg design pattern which provides a singleton like pattern for Python. A Borg object can be accessed by calling the getInstance() function. This function returns an instance of the Borg class which stores its state between successive calls to get the Borg object.
+
+### Singleton scenario
+
+- An information cache shared by multiple objects
+
+By keeping this information in a single object like Singleton or sharing it constantly in Borg objects, There is no need to retrieve the information from its original sources each time. All modules in Python act as Singletons. In our scenario, Borg acts as an information cache for networking acronyms, and their spelled out versions.
+
+### Singleton implementation
