@@ -2,7 +2,7 @@
 id: hzz8zbo5j4l0uxsfowtq3il
 title: Process Data from Dirty to Clean
 desc: ''
-updated: 1649816701964
+updated: 1649992828590
 created: 1649638993702
 ---
 > A strong analysis depends on the integrity of the data.
@@ -178,6 +178,10 @@ Having 99% confidence level is ideal, but most industries hope for at least a 90
 
 Margin of errors is the difference between the sample result and the population result.
 
+(or)
+
+The maximum amount that the sample results is expected to differ from those of the actual population.
+
 $$MOE_\gamma = z_\gamma \times \sqrt{\frac{\sigma^2}{n}}$$
 
 where $z_\gamma$ is the z-score, $n$ is the sample size, and $\sigma^2$ is the variance of the population.
@@ -199,6 +203,32 @@ $$z=\frac{x-\bar x}{\sigma}$$
 
 Where $x$ is the sample result, $\bar x$ is the population result, and $\sigma$ is the standard deviation of the population.
 
+Example [^1]: A market research agency conducted a survey to identify how many mobile phone users use their devices to access social media. They surveyed 1000 mobile phone users and found that 540 regularly used their devices to access their social media profiles.
+
+[^Reference]: https://goodcalculators.com/
+
+Let's assume that we require a 95% level of confidence; as such, the z-score = 1.96.
+
+The sample population, p, is 540 / 1000 = 0.54. (The sample size, n, was 1000.)
+
+As such, the margin of error in this survey is as follows:
+
+$$MOE=z\times\frac{\sqrt{p\times(1-p)}}{\sqrt{n}}$$
+
+MOE  is the margin of error,
+
+z is the z-score associated with a level of confidence,
+
+p is the sample proportion, expressed as a decimal,
+
+n is the sample size,
+
+$$MOE=1.96\times\frac{\sqrt{0.54\times(1-0.54)}}{\sqrt{1000}}$$
+
+$$MOE=\frac{0.977}{31.623}\times100=3.089%$$
+
+These results indicate that the market research company can conclude with 95% confidence that 54% of mobile phone users use their device to access social media, give or take 3%.
+
 ### Estimated response rate
 
 If you are running a survey of individuals, this is the percentage of people you expect will complete your survey out of those who received the survey.
@@ -211,3 +241,81 @@ In order to use a sample size calculator, you need to have the [[Sample size|ana
 - [Sample Size Calculator by Raosoft, Inc.](http://www.raosoft.com/samplesize.html)
 
 After you have plugged your information into one of these calculators, it will give you a recommended sample size. Keep in mind, the calculated sample size is the minimum number to achieve what you input for confidence level and margin of error. If you are working with a survey, you will also need to think about the estimated response rate to figure out how many surveys you will need to send out. For example, if you need a sample size of 100 individuals and your estimated response rate is 10%, you will need to send your survey to 1,000 individuals to get the 100 responses you need for your analysis.
+
+### Data Cleaning
+
+### Dirty Data
+
+Data that is incomplete, incorrect, or irrelevant to the problem you're trying to solve.
+
+Types of dirty data:
+
+![Types of dirty data](/assets/images/2022-04-15-06-53-36.png)
+
+### Clean Data
+
+Data that is complete, correct, and relevant to the problem you're trying to solve.
+
+### Data engineers
+
+Transform data into a useful a format for analysis and give it a reliable infrastucrure.
+
+### Data warehousing specialists
+
+Develope processess and prcedures to effectively store and organize data.
+
+### Null
+
+An indication that a value does not exist in a dataset.
+
+### Recognize and remedy dirty data
+
+### Data validation
+
+A tool for checking the accuracy and qualatity of data before adding or importing it.
+
+### Merger
+
+An agreement that unites two organizaton into single new one.
+
+Questions before merge two datasets
+
+- Do I have all the data I need?
+- Does the data I need exists within these datasets?
+- Does the data need to be cleaned, or are they ready for me to use?
+- Are the datasets cleaned to the same standard.
+
+### Data compatability
+
+How well two are nore datasets are able to work together.
+
+### Common data-cleaning pitfalls
+
+Some of the errors you might come across while cleaning your data could include:
+
+![common data-cleaning pitfalls](/assets/images/2022-04-15-07-31-43.png)
+
+Refer to these "top ten" lists for data cleaning in Microsoft Excel and Google Sheets to help you avoid the most common mistakes:
+
+- [Top ten ways to clean your data](https://support.microsoft.com/en-us/office/top-ten-ways-to-clean-your-data-2844b620-677c-47a7-ac3e-c2e157d1db19)
+- [10 Google Workspace tips to clean up data - Google Workspace Learning Center](https://support.google.com/a/users/answer/9604139?hl=en#zippy=)
+
+
+### Data cleaning features in spereadsheets
+
+### Conditonal formatting
+
+A spreedsheet tool that changes how cells apprear when values meet specific conditions.
+
+### Remove duplicates
+
+A tool that automatically searches for and eliminates duplicate entries from a spreadsheet.
+
+### Split
+
+A tool that divides text around a specified character or string and put each fragment into a new, seperate cell.
+
+### Concatenate
+
+A function that joins multiple text strings into a single string.
+
