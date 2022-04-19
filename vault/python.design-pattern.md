@@ -2,7 +2,7 @@
 id: khxu5xqcxi2rcuanehl87vu
 title: Design Pattern
 desc: ''
-updated: 1649819745343
+updated: 1650338200790
 created: 1648522082649
 ---
 
@@ -122,6 +122,8 @@ In the above **Cat** and **Dog** can inherit the attributes of **Pet**, but it w
   - Lists other patterns used to describe
   - Used together to solve a problem
   - Similar but different
+
+## Creation patterns
 
 ## Factory
 
@@ -265,3 +267,50 @@ When we have a class that is supposed to have only one instance, we can use the 
 By keeping this information in a single object like Singleton or sharing it constantly in Borg objects, There is no need to retrieve the information from its original sources each time. All modules in Python act as Singletons. In our scenario, Borg acts as an information cache for networking acronyms, and their spelled out versions.
 
 ### Singleton implementation
+
+```python
+class Borg:
+  """Borg class making class attributes global"""
+  _shared_state = {} # Attribute dictionary
+
+  def __init__(self):
+    self.__dict__ = self._shared_state # Make it an attribute dictionary
+  def __str__(self):
+    return str(self._shared_state)
+class Singleton(Borg): # Inherits from the Borg class
+  """This class now shares all its attributes among its various instances"""
+  def __init__(self, **kwargs):
+    Borg.__init__(self)
+    self._shared_state.update(kwargs) # Update the attribute dictionary by inserting a new key-value pair
+  def __str__(self):
+    return str(self._shared_state)
+
+x = Singleton(HTTP="Hyper Text Transfer Protocol")
+print(x)
+
+y = Singleton(SNMP="Simple Network Management Protocol")
+print(y)
+```
+
+## Builder
+
+Builder is a solution to an antipattern called telescoping constructor. An antipattern is the opposite of the best programming practice and what we want to avoid.
+
+### Builder problem situation
+
+The telescoping constructor antipattern occurs when a software developer attempts to build a complex object using an excessive number of constructors. The builder pattern is trying to solve this problem.
+
+### Builder problem scenario
+
+Think of a scenario in which you're trying to build a car. This test requires various car parts to be first constructed individually and then assembled. The builder pattern brings order to this chaotic process to remove unnecessary complexity as much as possible.
+
+### Builder implementation
+
+ It partitions the process of building a complex object into four different roles:
+
+- The first role is a director in charge of actually building a product.
+- The second role provides all the necessary interfaces required in building an object. We call this one an abstract builder because there'll be a concrete builder inheriting from it.
+- The concrete builder class inherits from the abstract builder class and actually implements the details of the interfaces of the abstract builder class for the specific type of product.
+- The product role represents an object being built.
+
+```python

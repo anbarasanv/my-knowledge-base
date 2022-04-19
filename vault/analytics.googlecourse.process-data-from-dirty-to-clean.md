@@ -2,7 +2,7 @@
 id: hzz8zbo5j4l0uxsfowtq3il
 title: Process Data from Dirty to Clean
 desc: ''
-updated: 1649992828590
+updated: 1650336098793
 created: 1649638993702
 ---
 > A strong analysis depends on the integrity of the data.
@@ -319,3 +319,84 @@ A tool that divides text around a specified character or string and put each fra
 
 A function that joins multiple text strings into a single string.
 
+### Optimizing the data-cleaning process
+
+### Shpreadsheet functions
+
+A set of instructions that perform a specific calculation using the data in a spreadsheet.
+
+### Syntax
+
+A predetermine set of instructions that perform a specific calculation using the data in a spreadsheet.
+
+### COUNTIF
+
+A function that returns the number of cells that match a specified value.
+
+```code
+=COUNTIF(range, "value")
+```
+
+### LEN
+
+A function that returns the length of a text string.
+
+```code
+=LEN(text)
+```
+
+### LEFT
+
+A function that gives you a set number of characters from the left side of a text string.
+
+```code
+=LEFT(text, number of characters)
+```
+
+### RIGHT
+
+A function that gives you a set number of characters from the right side of a text string.
+
+```code
+=RIGHT(text, number of characters)
+```
+
+### MID
+
+A function that gives you a segment from the middle of a text string.
+
+```code
+=MID(text, start, number of characters)
+```
+
+### CONCATENATE
+
+A function that joins together multiple text strings into a single string.
+
+```code
+=CONCATENATE(text1, text2, text3, ...)
+```
+
+### TRIM
+
+A function that removes leading and trailing spaces from a text string.
+
+```code
+=TRIM(text)
+```
+
+### Workflow automation
+
+- [Automating Scientific Data Analysis Part 1:](https://towardsdatascience.com/automating-scientific-data-analysis-part-1-c9979cd0817e)
+- [Automating big-data analysis](https://news.mit.edu/2016/automating-big-data-analysis-1021)
+- [10 of the Best Options for Workflow Automation Software](https://technologyadvice.com/blog/information-technology/top-10-workflow-automation-software/)
+
+### Different data perspectives
+
+### VLOOKUP
+
+A function that searches for a certain value in a column to return a corresponding peiece of information.
+
+```code
+=VLOOKUP(data to lookup, 'where to look'!Range, column, [match type])
+```
