@@ -2,7 +2,7 @@
 id: khxu5xqcxi2rcuanehl87vu
 title: Design Pattern
 desc: ''
-updated: 1650338200790
+updated: 1650424410994
 created: 1648522082649
 ---
 
@@ -148,11 +148,6 @@ class Dog:
 
   def speak(self):
     return "Woof"
-
-  def get_pet(pet="dog"):
-    """Factory method"""
-    pets = dict(dog=Dog("Hope"))
-    return pets[pet]
 ```
 
 ```python
@@ -163,15 +158,14 @@ class Cat:
 
   def speak(self):
     return "Meow"
+```
 
+```python
 # The below function not part of the Cat class
 def get_pet(pet="dog"):
   """Factory method"""
   pets = dict(dog=Dog("Hope"), cat=Cat("Peace"))
   return pets[pet]
-```
-
-```python
 # now will try initiate and test above classes
 d = get_pet("dog")
 print(d.speak())
@@ -314,3 +308,52 @@ Think of a scenario in which you're trying to build a car. This test requires va
 - The product role represents an object being built.
 
 ```python
+class Director:
+  """Director"""
+  def __init__(self, builder):
+    self._builder = builder
+
+  def construct_car(self):
+    self._builder.create_new_car()
+    self._builder.add_model()
+    self._builder.add_tires()
+    self._builder.add_engine()
+
+  def get_car(self):
+    return self._builder.car
+
+class Builder():
+  """Abstract Builder"""
+  def __init__(self):
+    self.car = None
+
+  def create_new_car(self):
+    self.car = Car()
+
+class SkyLarkBuilder(Builder):
+  """Concrete Builder --> provides parts and tools to work on the parts"""
+  def add_model(self):
+    self.car.model = "Skylark"
+
+  def add_tires(self):
+    self.car.tires = "Regular tires"
+
+  def add_engine(self):
+    self.car.engine = "Turbo engine"
+
+class Car():
+  """Product"""
+  def __init__(self):
+    self.model = None
+    self.tires = None
+    self.engine = None
+
+  def __str__(self):
+    return '{} | {} | {}'.format(self.model, self.tires, self.engine)
+
+builder = SkyLarkBuilder()
+director = Director(builder)
+director.construct_car()
+car = director.get_car()
+print(car)
+```

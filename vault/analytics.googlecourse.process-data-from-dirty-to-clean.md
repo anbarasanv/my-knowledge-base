@@ -2,7 +2,7 @@
 id: hzz8zbo5j4l0uxsfowtq3il
 title: Process Data from Dirty to Clean
 desc: ''
-updated: 1650336098793
+updated: 1650421576348
 created: 1649638993702
 ---
 > A strong analysis depends on the integrity of the data.
@@ -400,3 +400,25 @@ A function that searches for a certain value in a column to return a correspondi
 ```code
 =VLOOKUP(data to lookup, 'where to look'!Range, column, [match type])
 ```
+
+### Data mapping
+
+The process of matching fields from one data source to another.
+
+### Compatibility
+
+How well two are more datasets are able to work together.
+
+### Using SQL to clean data
+
+SQL is the primary way data analysts extract data from databases.
+
+Spreadsheets and SQL both have their advantages and disadvantages:
+
+| Features of Spreadsheets                             | Features of SQL Databases                                          |
+| ---------------------------------------------------- | ------------------------------------------------------------------ |
+| Smaller data sets                                    | Larger datasets                                                    |
+| Enter data manually                                  | Access tables across a database                                    |
+| Create graphs and visualizations in the same program | Prepare data for further analysis in another software              |
+| Built-in spell check and other useful functions      | Fast and powerful functionality                                    |
+| Best when working solo on a project                  | Great for collaborative work and tracking queries run by all users |
