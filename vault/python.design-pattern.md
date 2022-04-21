@@ -2,7 +2,7 @@
 id: khxu5xqcxi2rcuanehl87vu
 title: Design Pattern
 desc: ''
-updated: 1650424410994
+updated: 1650511005176
 created: 1648522082649
 ---
 
@@ -357,3 +357,79 @@ director.construct_car()
 car = director.get_car()
 print(car)
 ```
+
+## Prototype
+
+Prototype clones objects according to a prototypical instance. Here the keyword is cloning. Note that we're talking about making a copy instead of building.
+
+### Prototype problem situation
+
+Prototype is useful when instantiating many identical objects individually, which could be expensive in terms of computing power. Cloning could be a good alternative because it makes a carbon copy in the memory space instead of building individual objects, respectively, from scratch the usual way.
+
+### Prototype problem scenario
+
+Let's assume that we are building a car. We can mass produce cars more easily and quickly If the cars have the same color and options. Similarly, in our Python programming scenario, you can clone the objects by making a copy of a prototype object instead of building them through constructors, as long as they're supposed to be identical without variations.
+
+### Prototype implementation
+
+Our solution consists of creating a prototypical instance first and then cloning it whenever you need the replica. **The pattern related to the prototype pattern is the abstract factory**.
+
+```python
+import copy
+
+class Prototype:
+  """Prototype"""
+  def __init__(self):
+    self._objects = {}
+
+  def register_object(self, name, obj):
+    """Register an object"""
+    self._objects[name] = obj
+
+  def unregister_object(self, name):
+    """Unregister an object"""
+    del self._objects[name]
+
+  def clone(self, name, **attr):
+    """Clone a registered object and update its attributes"""
+    obj = copy.deepcopy(self._objects.get(name))
+    obj.__dict__.update(attr)
+    return obj
+
+class Car:
+  """Product"""
+  def __init__(self):
+    self.name = "Skylark"
+    self.color = "Red"
+    self.options = "Ex"
+
+  def __str__(self):
+    return '{} | {} | {}'.format(self.name, self.color, self.options)
+
+c = Car()
+prototype = Prototype()
+prototype.register_object('skylark', c)
+c1 = prototype.clone('skylark')
+```
+
+## Structural Patterns
+
+## Decorator
+
+The decorator design pattern is a structural pattern that allows users to add new features to existing objects without changing their structures.
+
+Pattern makes implementing the decorator pattern very straightforward due to its built-in language feature.
+
+### Decorator problem situation
+
+ Our challenge here is to add additional features to an existing object dynamically without using subclasses.
+
+### Decorator problem scenario
+
+We start with a function displaying a hello world message. You want to make the message look fancier by decorating it with additional tasks, such as blink.
+
+### Decorator implementation
+
+Functions are objects in Python, and we can add additional features to these functions using the built-in decorator in Python.
+
+Patterns such as adapter, composite and strategy are related to the decorator pattern.

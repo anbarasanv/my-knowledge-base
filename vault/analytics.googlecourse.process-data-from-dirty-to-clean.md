@@ -2,7 +2,7 @@
 id: hzz8zbo5j4l0uxsfowtq3il
 title: Process Data from Dirty to Clean
 desc: ''
-updated: 1650421576348
+updated: 1650508085717
 created: 1649638993702
 ---
 > A strong analysis depends on the integrity of the data.
@@ -422,3 +422,76 @@ Spreadsheets and SQL both have their advantages and disadvantages:
 | Create graphs and visualizations in the same program | Prepare data for further analysis in another software              |
 | Built-in spell check and other useful functions      | Fast and powerful functionality                                    |
 | Best when working solo on a project                  | Great for collaborative work and tracking queries run by all users |
+
+### SQL dialects and their uses
+
+- [What Is a SQL Dialect, and Which one Should You Learn?](https://learnsql.com/blog/what-sql-dialect-to-learn/)
+- [Difference Between SQL Vs MySQL Vs SQL Server (with Examples)](https://www.softwaretestinghelp.com/sql-vs-mysql-vs-sql-server/)
+- [SQL Server, PostgreSQL, MySQL... what's the difference? Where do I start?](https://www.datacamp.com/community/blog/sql-differences)
+- [SQLite Windows Functions](https://sqlite.org/windowfunctions.html)
+- [What is SQL](https://www.sqltutorial.org/what-is-sql/)
+
+### Understand how data is measured
+
+Data is measured by the number of bits it takes to represent it. All information in a computer can be represented as a binary number consisting solely of 0’s and 1’s. Each 0 or 1 in a number is a bit. A bit is the smallest unit of storage in computers. Since computers work in binary (Base 2), this means that all the important numbers that differentiate between different data sizes will be powers of 2.
+
+A byte is a collection of 8 bits. Take a moment to examine the table below to get a feel for the difference between data measurements and their relative sizes to one another.
+
+| Unit      | Equivalent to  | Abbreviation | Real-World Example                             |
+| --------- | -------------- | ------------ | ---------------------------------------------- |
+| Byte      | 8 bits         | B            | 1 character in a string                        |
+| Kilobyte  | 1024 bytes     | KB           | A page of text (~4 kilobytes)                  |
+| Megabyte  | 1024 Kilobytes | MB           | 1 song in MP3 format (~2-3 megabytes)          |
+| Gigabyte  | 1024 Megabytes | GB           | ~300 songs in MP3 format                       |
+| Terabyte  | 1024 Gigabytes | TB           | ~500 hours of HD video                         |
+| Petabyte  | 1024 Terabytes | PB           | 10 billion Facebook photos                     |
+| Exabyte   | 1024 Petabytes | EB           | ~500 million hours of HD video                 |
+| Zettabyte | 1024 Exabytes  | ZB           | All the data on the internet in 2019 (~4.5 ZB) |
+
+### Widely used SQL queries
+
+```sql
+SELECT col1, col2 FROM table_name;
+```
+
+```sql
+INSERT INTO table_name (col1, col2) VALUES (value1, value2);
+```
+
+```sql
+UPDATE table_name SET col1 = value1, col2 = value2 WHERE condition;
+```
+
+```sql
+DELETE FROM table_name WHERE condition;
+```
+
+```sql
+CREATE TABLE IF NOT EXISTS table_name (col1 INT, col2 INT);
+```
+
+```sql
+DROP TABLE IF EXISTS table_name;
+```
+
+### Cleaning String variables using sql
+
+```sql
+SELECT DISTINCT(col1) FROM table_name;
+```
+
+```sql
+SELECT LENGTH(col1) AS col1_len FROM table_name;
+```
+
+```sql
+SELECT col1 FROM table_name WHERE LENGTH(col1) > Integer;
+```
+
+```sql
+SELECT DISTINCT(col1) FROM table_name WHERE SUBSTR(col1, Integer, Integer) = String;
+```
+
+```sql
+SELECT DISTINCT(col1) FROM table_name WHERE TRIM(col1) = String;
+```
