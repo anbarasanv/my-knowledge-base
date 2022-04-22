@@ -2,7 +2,7 @@
 id: khxu5xqcxi2rcuanehl87vu
 title: Design Pattern
 desc: ''
-updated: 1650511005176
+updated: 1650596685470
 created: 1648522082649
 ---
 
@@ -433,3 +433,106 @@ We start with a function displaying a hello world message. You want to make the 
 Functions are objects in Python, and we can add additional features to these functions using the built-in decorator in Python.
 
 Patterns such as adapter, composite and strategy are related to the decorator pattern.
+
+```python
+from functools import wraps
+
+def make_blink(function):
+  """Defines the decorator"""
+  # This makes the decorator transparent in terms of its name and docstring
+  @wraps(function)
+  # Define the inner function
+  def decorator():
+    # Grab the return value of the function being decorated
+    ret = function()
+    # Add new functionality to the function being decorated
+    return "<blink>{}</blink>".format(ret)
+  return decorator
+
+# Apply the decorator here!
+@make_blink
+def hello_world():
+  """Original function"""
+  return "Hello World!"
+
+# Check the result of decorating
+print(hello_world())
+# Check if the function name is still the same
+print(hello_world.__name__)
+# Check if the docstring is still the same
+print(hello_world.__doc__)
+```
+
+## Proxy
+
+Proxy becomes handy when creating a highly resource-intensive object.
+
+### Proxy problem situation
+
+The problem we need to solve here is postponing our object creation as long as possible, due to the high-resource requirement of the object we're creating. Therefore, there's a need for a placeholder that will, in turn, create the object when its creation is absolutely necessary.
+
+### Proxy problem scenario
+
+We create an instance of a producer class only when it's available because only a fixed number of producer objects can exist at a given time. Our proxy is an artist who is checking to see if the producer becomes available for a guest. In the proxy design pattern, clients interact with a proxy object most of the time until the resource-intensive object becomes available.
+
+### Proxy implementation
+
+The proxy object is in charge of creating the resource-intensive objects. **Adapter and Decorator are related to the proxy design pattern**.
+
+```python
+import time
+class Producer:
+  """Define the 'resource-intensive' object to instantiate!"""
+  def produce(self):
+    print("Producer is hard-working!")
+
+  def meet(self):
+    print("Producer has time to meet you now!")
+
+class Proxy:
+  """Define the 'relatively less resource-intensive' proxy to instantiate as a middleman!"""
+  def __init__(self):
+    self.occupied = 'No'
+    self.producer = None
+
+  def produce(self):
+    """Check if producer is available"""
+    print("Artist checking if producer is available...")
+
+    if self.occupied == 'No':
+      # If the producer is available, create a producer object!
+      self.producer = Producer()
+      time.sleep(2)
+
+      # Make the producer meet the guest!
+      self.producer.meet()
+    else:
+      # Otherwise, don't instantiate a producer
+      time.sleep(2)
+      print("Producer is busy!")
+
+# Instantiate a Proxy
+p = Proxy()
+# Make the proxy: Artist produce until Producer is available
+p.produce()
+# change the state to 'occupied'
+p.occupied = 'Yes'
+# Make the Producer produce
+p.produce()
+```
+
+## Adapter
+
+The adapter pattern converts the interface of a class into another one a client is expecting.
+
+### Adapter problem situation
+
+This time, our problem is that the interfaces are incompatible between a client and a server.
+
+### Adapter problem scenario
+
+This time, our problem is that the interfaces are incompatible between a client and a server.
+
+### Adapter implementation
+
+The adapter pattern that translates the method names between the client and the server code. British and decorators are related to the adapter pattern.

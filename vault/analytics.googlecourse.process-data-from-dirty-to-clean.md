@@ -2,7 +2,7 @@
 id: hzz8zbo5j4l0uxsfowtq3il
 title: Process Data from Dirty to Clean
 desc: ''
-updated: 1650508085717
+updated: 1650594327190
 created: 1649638993702
 ---
 > A strong analysis depends on the integrity of the data.
@@ -495,3 +495,42 @@ SELECT DISTINCT(col1) FROM table_name WHERE SUBSTR(col1, Integer, Integer) = Str
 ```sql
 SELECT DISTINCT(col1) FROM table_name WHERE TRIM(col1) = String;
 ```
+
+### CAST
+
+Can be used to convert anything from one data type to another.
+
+```sql
+SELECT CAST(col1 AS INT) FROM table_name;
+```
+
+### CONCAT
+
+Adds strins together ti create new text strings that cab be used as unique keys.
+
+```sql
+SELECT CONCAT(col1, col2) FROM table_name;
+```
+
+### COALESCE
+
+Can be used to return non-null values in a list.
+
+```sql
+SELECT COALESCE(col1, col2) FROM table_name;
+```
+
+### Verification
+
+A processs to confirm that a data-cleaning effor was well-executed and the resulting data is accurate and reliable.
+
+### Changelog
+
+A file containing a chronologically oredered list of modifications made to a project.
+
+### See the bigger picture when verifying data-cleaning
+
+1. Consider the business problem
+2. Consider the goal
+3. Consider the data
+
