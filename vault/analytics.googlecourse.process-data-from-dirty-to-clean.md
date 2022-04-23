@@ -2,7 +2,7 @@
 id: hzz8zbo5j4l0uxsfowtq3il
 title: Process Data from Dirty to Clean
 desc: ''
-updated: 1650594327190
+updated: 1650679669585
 created: 1649638993702
 ---
 > A strong analysis depends on the integrity of the data.
@@ -534,3 +534,67 @@ A file containing a chronologically oredered list of modifications made to a pro
 2. Consider the goal
 3. Consider the data
 
+### Data-cleaning verification: A checklist
+
+- **Sources of errors:** Did you use the right tools and functions to find the source of the errors in your dataset?
+- **Null data:** Did you search for NULLs using conditional formatting and filters?
+- **Misspelled words:** Did you locate all misspellings?
+that your numeric data has been entered correctly?
+- **Extra spaces and characters:** Did you remove any extra spaces or characters using the TRIM function?
+- **Duplicates:** Did you remove duplicates in spreadsheets using the Remove Duplicates function or DISTINCT in SQL?
+- **Mismatched data types:** Did you check that numeric, date, and string data are typecast correctly?
+- **Messy (inconsistent) strings:** Did you make sure that all of your strings are consistent and meaningful?
+- **Messy (inconsistent) date formats:** Did you format the dates consistently throughout your dataset?
+- **Misleading variable labels (columns):** Did you name your columns meaningfully?
+- **Truncated data:** Did you check for truncated or missing data that needs correction?
+- **Business Logic:** Did you check that the data makes sense given your knowledge of the business?
+
+![Review the goal of your project](/assets/images/2022-04-23-07-12-12.png)
+
+### Capturing cleaning changes
+
+### Documentation
+
+The process of tracking changes, additions, deletions, and errors involved in your data-cleaning effort.
+
+- Recover data-cleaning errors
+- Infrom other users of changes
+- Determine quality of data
+
+### Best practices for changelogs
+
+A changelog for a personal project may take any form desired. However, in a professional setting and while collaborating with others, readability is important. These guiding principles help to make a changelog accessible to others:
+
+- Changelogs are for humans, not machines, so write legibly.
+- Every version should have its own entry.
+- Each change should have its own line.
+- Group the same types of changes. For example, Fixed should be grouped separately from Added.
+- Versions should be ordered chronologically starting with the latest.
+- The release date of each version should be noted.
+
+All the changes for each category should be grouped together. Types of changes usually fall into one of the following categories:
+
+- **Added:** new features introduced
+- **Changed:** changes in existing functionality
+- **Deprecated:** features about to be removed
+- **Removed:** features that have been removed
+- **Fixed:** bug fixes
+- **Security:** lowering vulnerabilities
+
+```markdown
+# Sample Changelog
+This file contains the notable changes to the project
+
+Version 1.0.0 (23-04-2022)
+## New
+    - Added column classifiers (Date, Time, PerUnitCost, TotalCost, etc. )
+    - Added Column “AveCost” to track average item cost
+
+## Changes
+    - Changed date format to DD-MM-YYYY
+    - Removal of whitespace (cosmetic)
+
+## Fixes
+    - Fixed misalignment in Column "TotalCost" where some rows did not match with correct dates
+    - Fixed SUM to run over entire column instead of partial
+```

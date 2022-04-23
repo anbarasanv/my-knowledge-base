@@ -2,7 +2,7 @@
 id: khxu5xqcxi2rcuanehl87vu
 title: Design Pattern
 desc: ''
-updated: 1650596685470
+updated: 1650683147713
 created: 1648522082649
 ---
 
@@ -531,8 +531,70 @@ This time, our problem is that the interfaces are incompatible between a client 
 
 ### Adapter problem scenario
 
-This time, our problem is that the interfaces are incompatible between a client and a server.
+We have Korean and British objects that have different method names for speaking. The client would like to use a uniform interface that is the speak method.
 
 ### Adapter implementation
 
 The adapter pattern that translates the method names between the client and the server code. British and decorators are related to the adapter pattern.
+
+```python
+class Korean:
+  """Korean speaker"""
+  def __init__(self):
+    self.name = "Korean"
+
+  def speak_korean(self):
+    return "An-neyong?"
+
+class British:
+  """English speaker"""
+  def __init__(self):
+    self.name = "British"
+
+  def speak_english(self):
+    return "Hello!"
+
+class Adapter:
+  """This changes the generic method name to the desired one"""
+  def __init__(self, object, **adapted_method):
+    """Change the name of the method"""
+    self._object = object
+
+    # Add a new dictionary item that establishes the mapping between the generic method name: speak() and the concrete method
+    # For example, speak_korean will be translated to speak() by the adapter
+    self.__dict__.update(adapted_method)
+
+  def __getattr__(self, attr):
+    """Simply return the rest of attributes!"""
+    return getattr(self._object, attr)
+
+# List to store speaker objects
+objects = []
+
+# Create a Korean object
+korean = Korean()
+
+# Create a British object
+british = British()
+
+# Append the objects to the objects list
+objects.append(Adapter(korean, speak=korean.speak_korean))
+objects.append(Adapter(british, speak=british.speak_english))
+
+for obj in objects:
+  print("{} says '{}'\n".format(obj.name, obj.speak()))
+```
+
+## Composite
+
+### Composite problem situation
+
+The composite design pattern maintains a tree data structure to represent part-whole relationships. Here, we want to build a recursive tree data structure so that an element of the tree can have its own sub-elements.
+
+### Composite problem scenario
+
+Creating menu and sub-menu items. The sub-menu items can also have their own sub-menu items. Our coding challenge is to display menu and sub-menu items using the composite design pattern.
+
+### Composite implementation
+
+Our solution consists of three major elements. The first one is Component. The second one is Child. And the third one is Composite. The Component element is an abstract class or concrete class called Child, inherit from the component class. And then, we have another concrete class called Composite, which also inherits from the Component class. Finally, our Composite class maintains Child objects by adding a removing them to and from a tree data structure.
