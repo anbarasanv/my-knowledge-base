@@ -2,7 +2,7 @@
 id: khxu5xqcxi2rcuanehl87vu
 title: Design Pattern
 desc: ''
-updated: 1650683147713
+updated: 1650855609052
 created: 1648522082649
 ---
 
@@ -598,3 +598,77 @@ Creating menu and sub-menu items. The sub-menu items can also have their own sub
 ### Composite implementation
 
 Our solution consists of three major elements. The first one is Component. The second one is Child. And the third one is Composite. The Component element is an abstract class or concrete class called Child, inherit from the component class. And then, we have another concrete class called Composite, which also inherits from the Component class. Finally, our Composite class maintains Child objects by adding a removing them to and from a tree data structure.
+
+```python
+class Component(object):
+  """Abstract class"""
+  def __init__(self, *args, **kwargs):
+    pass
+  def component_function(self):
+    pass
+
+class Child(Component): # Inherit from the Component class
+  """Concrete class"""
+  def __init__(self, *args, **kwargs):
+    Component.__init__(self, *args, **kwargs)
+    # This is where we store the name of the child item
+    self.name = args[0]
+
+  def component_function(self):
+    # Print the name of your child item
+    print("{}".format(self.name))
+
+class Composite(Component): # Inherit from the abstract class, Component
+  """Concrete class and maintains a list of children"""
+  def __init__(self, *args, **kwargs):
+    Component.__init__(self, *args, **kwargs)
+    # This is where we store the name of the composite object
+    self.name = args[0]
+    # This is where we keep our children
+    self.children = []
+
+  def append_child(self, child):
+    """Method to add a new child"""
+    self.children.append(child)
+
+  def remove_child(self, child):
+    """Method to remove a child"""
+    self.children.remove(child)
+
+  def component_function(self):
+    # Print the name of the composite object
+    print("{}".format(self.name))
+
+    # Iterate through the children of this composite object
+    for i in self.children:
+      # Call the component_function() method on each child
+      i.component_function()
+
+# Build a composite submenu 1
+sub1 = Composite("submenu1")
+
+# Create a new child sub_submenu11
+sub11 = Child("sub_submenu11")
+# Create a new child sub_submenu12
+sub12 = Child("sub_submenu12")
+
+# Add the sub_submenu11 to submenu1
+sub1.append_child(sub11)
+# Add the sub_submenu12 to submenu1
+sub1.append_child(sub12)
+
+# Build a top-level composite menu
+top = Composite("top_menu")
+
+# Build a submenu 2 that is not a composite
+sub2 = Child("submenu2")
+
+# Add the composite sub1 to the top-level composite menu
+top.append_child(sub1)
+
+# Add the composite sub2 to the top-level composite menu
+top.append_child(sub2)
+
+# Let's test if our composite pattern works!
+top.component_function()
+```
