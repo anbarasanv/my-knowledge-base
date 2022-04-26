@@ -2,7 +2,7 @@
 id: khxu5xqcxi2rcuanehl87vu
 title: Design Pattern
 desc: ''
-updated: 1650855609052
+updated: 1650942428033
 created: 1648522082649
 ---
 
@@ -671,4 +671,57 @@ top.append_child(sub2)
 
 # Let's test if our composite pattern works!
 top.component_function()
+```
+
+## Bridge
+
+### Bridge problem situation
+
+The bridge pattern helps untangle an unnecessarily complicated class hierarchy. Especially when implementation-specific classes are mixed with implementation-independent classes. The problem here is that there are two parallel or orthogonal abstractions. One is implementation specific, and the other is implementation independent.
+
+### Bridge problem scenario
+
+ Implementation-independent circle abstraction and implementation-dependent circle abstraction. The implementation-dependent circle abstraction involves how to draw a circle. And the implementation-independent circle abstraction involves defining the properties of a circle and scaling it.
+
+### Bridge implementation
+
+Avoiding the abstracting in both implementation-specific and implementation-independent classes in a single class hierarchy. **The abstract factory and adapter patterns are the related patterns to the bridge design pattern**.
+
+```python
+class DrawingAPIOne(object):
+  """Implementation-specific abstraction: concrete class one"""
+  def draw_circle(self, x, y, radius):
+    print("API 1 drawing a circle at ({}, {} with radius {}!)".format(x, y, radius))
+
+class DrawingAPITwo(object):
+  """Implementation-specific abstraction: concrete class two"""
+  def draw_circle(self, x, y, radius):
+    print("API 2 drawing a circle at ({}, {} with radius {}!)".format(x, y, radius))
+
+class Circle(object):
+  """Implementation-independent abstraction: for example, there could be a rectangle class!"""
+  def __init__(self, x, y, radius, drawing_api):
+    """Initialize the necessary attributes"""
+    self._x = x
+    self._y = y
+    self._radius = radius
+    self._drawing_api = drawing_api
+
+  def draw(self):
+    """Implementation-specific abstraction taken care of by another class: DrawingAPI"""
+    self._drawing_api.draw_circle(self._x, self._y, self._radius)
+
+  def scale(self, percent):
+    """Implementation-independent"""
+    self._radius *= percent
+
+# Build the first circle object using API One
+circle1 = Circle(1, 2, 3, DrawingAPIOne())
+# Draw a circle
+circle1.draw()
+
+# Build the second circle object using API Two
+circle2 = Circle(2, 3, 4, DrawingAPITwo())
+# Draw a circle
+circle2.draw()
 ```
