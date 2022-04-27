@@ -2,7 +2,7 @@
 id: khxu5xqcxi2rcuanehl87vu
 title: Design Pattern
 desc: ''
-updated: 1650942428033
+updated: 1651028673464
 created: 1648522082649
 ---
 
@@ -724,4 +724,92 @@ circle1.draw()
 circle2 = Circle(2, 3, 4, DrawingAPITwo())
 # Draw a circle
 circle2.draw()
+```
+
+## Behavioral patterns
+
+## Observer
+
+### Observer problem situation
+
+The observer pattern establishes a one too many relationships between a subject and multiple observers. Our problem here is that a subject needs to be monitored, and other observer objects should be notified when there is a change in the subject.
+
+### Observer problem scenario
+
+In our scenario, we keep track of the core temperatures of reactors at a power plant. When there is a change in the core temperature, registered observers must be notified.
+
+### Observer implementation
+
+Our solution uses an abstract class called subject, which has the interface that allows operations such as attaching, detaching, and notifying observers. We also need concrete subject classes inheriting from the abstract subject class. Singleton is related to the observer design pattern.
+
+```python
+class Subject(object):
+  # Represents what is being 'observed'
+  def __init__(self):
+    # This where references to all the observers are being kept
+    # Note that this is a one-to-many relationship: there will be
+    # one subject to be observed by multiple _observers
+    self._observers = []
+
+  def attach(self, observer):
+    # If the observer is not in the observers list
+    # append the observer to the list
+    if observer not in self._observers:
+      self._observers.append(observer)
+
+  def detach(self, observer):
+    # Simply remove the observer
+    try:
+      self._observers.remove(observer)
+    except ValueError:
+      pass
+
+  def notify(self, modifier=None):
+    # For all observers in the list
+    # Don't notify the observer who changed the state
+    # Alert the observers that the subject state
+    # or state has changed
+    for observer in self._observers:
+      if modifier != observer:
+        observer.update(self)
+
+class Core(Subject):
+  # Note that the core class inherits from the Subject class
+  def __init__(self, name):
+    Subject.__init__(self)
+    # Name of the core
+    self._name = name
+    # Temperature of the core
+    self._temp = 0
+
+  @property # Getter that gets the core temperature
+  def temp(self):
+    return self._temp
+
+  @temp.setter # Setter that sets the core temperature
+  def temp(self, temp):
+    self._temp = temp
+    # Notify the observers whenever somebody changes the core tempe
+    self.notify()
+
+class TempViewer:
+  def update(self, subject):
+    # Alter method that is invoked when then subject notifies us
+    print("Temperature Viewer: {} has Temperature {}".format(subject._name, subject._temp))
+
+# Let's create our subjects
+c1 = Core("Core 1")
+c2 = Core("Core 2")
+
+# Let's create our observers
+v1 = TempViewer()
+v2 = TempViewer()
+
+# Let's attach our observers to the first core
+c1.attach(v1)
+c1.attach(v2)
+
+# Let's change the temperature of the first core
+c1.temp = 80
+c1.temp = 90
 ```

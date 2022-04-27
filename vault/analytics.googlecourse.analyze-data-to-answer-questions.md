@@ -2,7 +2,7 @@
 id: d5sodtya7p4i9a7rf3vjnd1
 title: Analyze Data to Answer Questions
 desc: ''
-updated: 1650940115945
+updated: 1651026479550
 created: 1650854824278
 ---
 
@@ -39,3 +39,13 @@ Nothing else on the spreadsheet is arranged beside the specified cells in a colu
 ### Customized sort order
 
 When you sort data in a spreadsheet using multiple conditions, you can specify the order of the sorting.
+
+### Data Formatting
+
+Data formatting is a process that helps you organize and format data for analysis.
+
+In correctly formatted data can:
+
+- Leads to mistakes
+- Take time to fix
+- Affect stakeholders decision-making
