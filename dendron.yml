@@ -65,6 +65,7 @@ workspace:
     maxNoteLength: 204800
     dendronVersion: 0.83.0
     enableEditorDecorations: true
+    enableFullHierarchyNoteTitle: false
 preview:
     enableFMTitle: true
     enableNoteTitleForLink: true

@@ -2,7 +2,7 @@
 id: khxu5xqcxi2rcuanehl87vu
 title: Design Pattern
 desc: ''
-updated: 1651028673464
+updated: 1651114660747
 created: 1648522082649
 ---
 
@@ -812,4 +812,45 @@ c1.attach(v2)
 # Let's change the temperature of the first core
 c1.temp = 80
 c1.temp = 90
+```
+
+## Visitor
+
+### Visitor problem situation
+
+The visitor design pattern allows adding new features to an existing class hierarchy without changing it. It's sometimes necessary to add new operations, dynamically to exist in classes with minimal changes.
+
+### Visitor problem scenario
+
+Visitors in this scenario include an HVAC specialist and an electrician. The HVAC specialist in our scenario is visitor type one, and the electrician is visitor type two.
+
+### Visitor implementation
+
+The visitor pattern represents new operations to be performed on the various elements of an existing class hierarchy. Visitors can also provide operations on a composite object.
+
+```python
+class House(object):
+  # The class being visited
+  def accept(self, visitor):
+    """Interface to accept a visitor"""
+    # Triggers the visiting operation!
+    visitor.visit(self)
+
+  def work_on_hvac(self, hvac_specialist):
+    # Note that we now have a reference to a HVAC specialist object
+    print(self, "worked on by", hvac_specialist)
+
+  def work_on_electricity(self, electrician):
+    # Note that we now have a reference to a electrician object
+    print(self, "worked on by", electrician)
+
+  def __str__(self):
+    """Simply return the class name when the House object is printed"""
+    return self.__class__.__name__
+
+class Visitor(object):
+  """Abstract visitor"""
+  def __str__(self):
+    """Simply return the class name when the Visitor object is printed"""
+    return self.__class__.__name__
 ```
