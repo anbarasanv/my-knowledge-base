@@ -10,3 +10,4 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QDatasets Google Cloud\nDataset Search\nKaggle\nBigQuery public datasets | Google Cloud\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QCreational\nStructural\\E$"}
 {"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\QParticipants\nClass involved to form a design pattern\nRoles of these classes\nQuality attributes\nNonfunctional requirement's such as\nusability\nmodifiability\nreliability\nperformance\nEffect on the entire software, such as\narchitectural solutions\nForces\nVarious factors or trade-offs to consider\nmanifested in quality attributes\nunintended consequences\nConsequences\nworse performance\nDecision makers should consider consequences.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QVLOOKUP (Vertical Lookup)\\E$"}

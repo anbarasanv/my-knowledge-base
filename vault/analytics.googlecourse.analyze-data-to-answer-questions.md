@@ -2,7 +2,7 @@
 id: d5sodtya7p4i9a7rf3vjnd1
 title: Analyze Data to Answer Questions
 desc: ''
-updated: 1651026479550
+updated: 1651199912771
 created: 1650854824278
 ---
 
@@ -49,3 +49,35 @@ In correctly formatted data can:
 - Leads to mistakes
 - Take time to fix
 - Affect stakeholders decision-making
+
+### Advanced spreadsheet tips and tricks
+
+- [Keyboard shortcuts for Google Sheets - Computer - Google Docs Editors Help](https://support.google.com/docs/answer/181110): This is a great resource for quickly learning a range of keyboard shortcuts that can make regular tasks quicker and easier, like navigating your spreadsheet or accessing formulas and functions. This list contains shortcuts for the desktop and mobile versions of Google Sheets so that you can apply them to your work no matter what device you are using.
+- [Google Sheets function list - Google Docs Editors Help](https://support.google.com/docs/table/25273?hl=en): This is a comprehensive list of the Google Sheets functions and syntax. Each function is listed with a link to learn more.
+- [20 Google Sheets Formulas You Must Know](https://automate.io/blog/google-spreadsheet-formulas/): This blog article summarizes and describes 20 of the most useful Google Sheets formulas.
+- [18 Google Sheets Formulas Tips & Techniques You Should Know](https://www.benlcollins.com/spreadsheets/google-sheets-formulas-techniques/): These are tips for using Google Sheets shortcuts when working with formulas.
+
+### Data Aggregation
+
+*Aggregation*: Collecting** or gathering many pieces into a while.
+
+**Data aggregation**: The process of gathering data from multiple sources in order to combine it into a single summarized collection.
+
+Data can also be aggregated over a given time period to provide statistics such as:
+
+- Averages
+- Minimums
+- Maximums
+- Sums
+
+### VLOOKUP (Vertical Lookup)
+
+A function that searches for a certain value in a column to return a corresponding piece of information.
+
+### VALUE
+
+A function that converts a text string that represents a number to numerical value.
+
+```cell
+VALUE(A1)
+```

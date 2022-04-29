@@ -2,7 +2,7 @@
 id: khxu5xqcxi2rcuanehl87vu
 title: Design Pattern
 desc: ''
-updated: 1651114660747
+updated: 1651201632754
 created: 1648522082649
 ---
 
@@ -853,4 +853,49 @@ class Visitor(object):
   def __str__(self):
     """Simply return the class name when the Visitor object is printed"""
     return self.__class__.__name__
+
+class HVACSpecialist(Visitor):
+  # Inherits from the parent class, visitor
+  """Concrete visitor: HVAC specialist"""
+  def visit(self, house):
+    # Note that the visitor now has a reference to the house object
+    """The HVAC specialist visits a house to work on the HVAC"""
+    house.work_on_hvac(self)
+
+class Electrician(Visitor):
+  # Inherits from the parent class, visitor
+  """Concrete visitor: electrician"""
+  def visit(self, house):
+    # Note that the visitor now has a reference to the house object
+    """The electrician visits a house to work on the electricity"""
+    house.work_on_electricity(self)
+
+# Create an HVAC specialist
+hv = HVACSpecialist()
+
+# Create an electrician
+e = Electrician()
+
+# Create a house
+home = House()
+
+# Let the house accept the HVAC specialist and work on the house by invoking the visit() method
+home.accept(hv)
+
+# Let the house accept the electrician and work on the house by invoking the visit() method
+home.accept(e)
 ```
+
+## Iterator
+
+### Iterator problem situation
+
+The iterator pattern allows a client to have sequential access to the elements of an aggregate object without exposing its underlying structure. The problem is that some programmers overcrowd the traversal interfaces of an aggregate object for every possible way of iteration.
+
+### Iterator problem scenario
+
+We'll be building our own iterator that takes advantage of a built-in Python iterator called zip. The iterator goes through a list of German counting words. It will iterate only up to a certain point based on client input. The iterator isolates access and traversal features from the aggregate object. It also provides an interface for accessing the elements of an aggregate object. An iterator keeps track of the objects being traversed.
+
+### Iterator implementation
+
+Our solution is to make the aggregate object create an iterator for a client. The [[Composite|python.design-pattern#composite]] design pattern is related to the iterator pattern**.
