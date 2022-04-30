@@ -2,7 +2,7 @@
 id: khxu5xqcxi2rcuanehl87vu
 title: Design Pattern
 desc: ''
-updated: 1651201632754
+updated: 1651322797831
 created: 1648522082649
 ---
 
@@ -899,3 +899,144 @@ We'll be building our own iterator that takes advantage of a built-in Python ite
 ### Iterator implementation
 
 Our solution is to make the aggregate object create an iterator for a client. The [[Composite|python.design-pattern#composite]] design pattern is related to the iterator pattern**.
+
+```python
+def count_to(count):
+  """Our iterator implementation"""
+  # Our list
+  numbers_in_german = ["eins", "zwei", "drei", "vier", "funf"]
+
+  # Our built-in iterator
+  # Creates a tuple such as (1, "eins")
+  iterator = zip(range(count), numbers_in_german)
+
+  # Iterate through our iterable list
+  # Extract the German numbers
+  # Put them in a generator called number
+  for position, number in iterator:
+    # Returns a 'generator' containing numbers in German
+    yield number
+
+# Let's test the generator returned by our iterator
+for num in count_to(3):
+  print("{}".format(num))
+```
+
+## Strategy
+
+### Strategy problem situation
+
+The strategy pattern offers a family of interchangeable algorithms to a client. The problem we often see is that there is a need for dynamically changing the behavior of an object.
+
+### Strategy problem scenario
+
+We offer our strategy class with its default behavior. When there is a need, we provide another variation of the strategy class by dynamically replacing its default method with a new one.
+
+### Strategy implementation
+
+Python allows adding methods dynamically by importing the **types** module.
+
+```python
+import types
+
+class Strategy:
+  """The Strategy Pattern class"""
+  def __init__(self, function=None):
+    self.name = "Default Strategy"
+    # If a reference to a function is provided, replace the strategy method with the given function
+    if function:
+      self.execute = types.MethodType(function, self)
+
+  def execute(self):
+    # This gets replaced by another version if a new strategy is provided
+    """The default method that prints the name of the strategy being used"""
+    print("{} is used!".format(self.name))
+
+# Replacement method 1
+def strategy_one(self):
+  print("{} is used to execute method 1".format(self.name))
+
+# Replacement method 2
+def strategy_two(self):
+  print("{} is used to execute method 2".format(self.name))
+
+# Let's create our default strategy
+s0 = Strategy()
+# Let's execute our default strategy
+s0.execute()
+
+# Let's create the first variation of our default strategy
+s1 = Strategy(strategy_one)
+# Let's set its name
+s1.name = "Strategy One"
+# Let's execute the first variation
+s1.execute()
+
+s2 = Strategy(strategy_two)
+s2.name = "Strategy Two"
+s2.execute()
+```
+
+## Chain of responsibility
+
+### Chain of responsibility problem situation
+
+The chain of responsibility pattern opens up various possibilities of processing for a given request. The chain of responsibility pattern decouples the request and its processing. Our problem is that many types of processing need to be done depending on the request.
+
+
+### Chain of responsibility problem scenario
+
+We receive an integer value. We use different handlers to find out its range.
+
+
+### Chain of responsibility implementation
+
+We use an abstract handler that stores a successor that will handle a request if the current handler doesn't handle it. Concrete handlers check if they can handle the request. If they can, they handle it and return a true value, indicating that the request was handled. Composite is related to the chain of responsibility, design pattern.
+
+```python
+class Handler:
+  """The Handler"""
+  def __init__(self, successor=None):
+    self._successor = successor
+
+  def handle(self, request):
+    """Handle the request or pass it to the successor"""
+    handled = self._handle(request)
+    # If the request was not handled, then pass it to the successor
+    if not handled:
+      self._successor.handle(request)
+
+  def _handle(self, request):
+    """This is where the actual request handling happens"""
+    raise NotImplementedError("Must provide implementation in subclass!")
+
+class ConcreteHandler1(Handler):
+  """Concrete handler 1"""
+  def _handle(self, request):
+    """If the request is 1, then handle it"""
+    if request == 1:
+      print("{} handled request {}".format(self.__class__.__name__, request))
+      # indiacate that the request has been handled
+      return True
+  def _handle(self, request):
+    """If the request is 2, then handle it"""
+    if request == 2:
+      print("{} handled request {}".format(self.__class__.__name__, request))
+      # indiacate that the request has been handled
+      return True
+class Client:
+  """The client"""
+  def __init__(self):
+    self.handler = ConcreteHandler1(ConcreteHandler2(ConcreteHandler3()))
+
+  def delegate(self, requests):
+    """Send the requests to the handler"""
+    for request in requests:
+      self.handler.handle(request)
+# create a client
+c = Client()
+
+requests = [2, 5, 1, 3, 2]
+# send requests to the client
+c.delegate(requests)
+```

@@ -2,7 +2,7 @@
 id: d5sodtya7p4i9a7rf3vjnd1
 title: Analyze Data to Answer Questions
 desc: ''
-updated: 1651199912771
+updated: 1651286547077
 created: 1650854824278
 ---
 
@@ -74,10 +74,20 @@ Data can also be aggregated over a given time period to provide statistics such 
 
 A function that searches for a certain value in a column to return a corresponding piece of information.
 
+```cell
+=VLOOKUP(value, range, col, [exact])
+```
+
 ### VALUE
 
 A function that converts a text string that represents a number to numerical value.
 
 ```cell
-VALUE(A1)
+=VALUE(text)
 ```
+
+### Troubleshooting questions
+
+- How should I prioritize these issues?
+- In a single sentence, what's the issue I'm facing?
+- What resource can help me to solve this problem?
