@@ -2,7 +2,7 @@
 id: d5sodtya7p4i9a7rf3vjnd1
 title: Analyze Data to Answer Questions
 desc: ''
-updated: 1651286547077
+updated: 1651715583032
 created: 1650854824278
 ---
 
@@ -91,3 +91,81 @@ A function that converts a text string that represents a number to numerical val
 - How should I prioritize these issues?
 - In a single sentence, what's the issue I'm facing?
 - What resource can help me to solve this problem?
+
+### Understanding SQL joins
+
+A SQL clause that is used to combine rows from two or more tables based on a related column.
+
+There four common joins:
+
+- Inner join
+- Left join
+- Right join
+- Outer join (full outer join)
+
+![Inner & Full Joins](/assets/images/2022-05-05-06-39-49.png)
+![Left & Right Joins](/assets/images/2022-05-05-07-04-20.png)
+
+### Inner join
+
+A function that returns records with matching values in both tables.
+
+```sql
+SELECT * FROM table1 INNER JOIN table2 ON table1.column = table2.column
+```
+
+### Left join
+
+A function that will return all the records from the left table, and only the matching records from the right table.
+
+**Note:** The table mentioned first is left, and the table mentioned second is right.
+
+```sql
+SELECT * FROM table1 LEFT JOIN table2 ON table1.column = table2.column
+```
+
+### Right join
+
+A function that will return all the records from the right table, and only the matching records from the left table.
+
+```sql
+SELECT * FROM table1 RIGHT JOIN table2 ON table1.column = table2.column
+```
+
+### Outer join
+
+A function that combines `RIGHT` and `LEFT` join to return all matching records from both tables.
+
+```sql
+SELECT * FROM table1 FULL OUTER JOIN table2 ON table1.column = table2.column
+```
+
+### JOIN Reference
+
+- [SQL Join Reference](https://www.w3schools.com/sql/sql_join.asp)
+- [SQL Joins - The Ultimate Guide](https://www.essentialsql.com/introduction-database-joins/)
+- [SQL Join Types Explained Visually](https://dataschool.com/how-to-teach-people-sql/sql-join-types-explained-visually/)
+- [SQL JOIN - Bring Data Together](https://towardsdatascience.com/sql-join-8212e3eb9fde)
+- [SQL JOIN](https://www.dofactory.com/sql/join)
+
+### Count and Count Distinct
+
+`COUNT`: A query that returns the number of rows in a specified range.
+
+```sql
+SELECT COUNT(*) FROM table
+```
+
+`COUNT DISTINCT`: A query that returns the number of distinct values in a specified range.
+
+```sql
+SELECT COUNT(DISTINCT column) FROM table
+```
+
+### SQL Sub-Query
+
+`SQL SUBQUERY`: A SQL query that is nested inside a larger query.
+
+```sql
+SELECT * FROM table WHERE column IN (SELECT column FROM table)
+```
