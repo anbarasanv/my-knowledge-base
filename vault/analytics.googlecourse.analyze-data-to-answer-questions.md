@@ -2,7 +2,7 @@
 id: d5sodtya7p4i9a7rf3vjnd1
 title: Analyze Data to Answer Questions
 desc: ''
-updated: 1651715583032
+updated: 1651802654555
 created: 1650854824278
 ---
 
@@ -169,3 +169,28 @@ SELECT COUNT(DISTINCT column) FROM table
 ```sql
 SELECT * FROM table WHERE column IN (SELECT column FROM table)
 ```
+
+### HAVING
+
+`Having`:Allows you to add a filter to your query instead of the underlying table that can only be used with aggregate functions.
+
+```sql
+SELECT * FROM table GROUP BY column HAVING column > 5
+```
+
+### CASE
+
+`CASE`: Returns records with your condition by allowing you to include if/then statements in your query.
+
+```sql
+SELECT * FROM table WHERE column = CASE WHEN column = 1 THEN 1 ELSE 0 END
+```
+
+### References
+
+- [SQL HAVING Clause](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_having.asp.html)
+- [SQL CASE Statement](https://www.w3schools.com/sql/sql_case.asp)
+- [MySQL IF() Function](https://www.w3schools.com/sql/func_mysql_if.asp)
+- [SQL COUNT() Function](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_count.asp.html)
+- [Understanding SQL Sub Queries - w3resource](https://www.w3resource.com/sql/subqueries/understanding-sql-subqueries.php)
+- [Writing Sub queries in SQL | Advanced SQL - Mode](https://mode.com/sql-tutorial/sql-sub-queries/)
