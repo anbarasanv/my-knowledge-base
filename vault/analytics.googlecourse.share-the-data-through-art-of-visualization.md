@@ -2,7 +2,7 @@
 id: zutin7ln89tl1nkmfto0jeh
 title: Share the Data through Art of Visualization
 desc: ''
-updated: 1652754271103
+updated: 1652839859704
 created: 1652666865164
 ---
 
@@ -177,3 +177,43 @@ A distribution graph displays the spread of various outcomes in a dataset.
 - [Which is the best chart: Selecting among 14 types of charts Part I](https://www.youtube.com/watch?v=C07k0euBpr8)
 
 ![Decision tree](/assets/images/2022-05-17-07-54-04.png)
+
+`Elements of Art`
+
+- 🧁 Line
+- 🧁 Shape
+- 🧁 Color
+- 🧁 Space
+- 🧁 Movement
+
+`Nine basic principles of design`
+
+![9 basic principles pf design](/assets/images/2022-05-18-07-00-42.png)
+
+`Elements for effective visuals`
+
+- 🍰 Clear Meaning
+- 🍰 Sophisticated use of contrast
+- 🍰 Refined execution
+
+`Five phases of the design process`
+
+- 🍒 **Empathize**: Thinking about the emotions and needs of the target audience for the data visualization
+- 🍒 **Define**: Figuring out exactly what your audience needs from the data
+- 🍒 **Ideate**: Generating ideas for data visualization
+- 🍒 **Prototype**: Putting visualizations together for testing and feedback
+- 🍒 **Test**: Showing prototype visualizations to people before stakeholders see them
+
+### Headlines, Subtitles, and Labels
+
+`Headline 🎧`
+
+A line of words printed in large letters at the top of the visualization to communicate what data is being presented.
+
+`Subtitle 📖`
+
+A subtitle supports the headline by adding more context and description.
+
+`Label 📝`
+
+A legend or key identifies the meaning of various elements in a data visualization and can be used as an alternative to labeling data directly. Direct labeling like this keeps your audience's attention fixed on your graphic and helps them identify data quickly. While legends force the audience to do more work, because a legend is positioned away from the chart's data.
