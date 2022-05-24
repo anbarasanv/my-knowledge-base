@@ -2,7 +2,7 @@
 id: zutin7ln89tl1nkmfto0jeh
 title: Share the Data through Art of Visualization
 desc: ''
-updated: 1652839859704
+updated: 1653356480993
 created: 1652666865164
 ---
 
@@ -217,3 +217,12 @@ A subtitle supports the headline by adding more context and description.
 `Label 📝`
 
 A legend or key identifies the meaning of various elements in a data visualization and can be used as an alternative to labeling data directly. Direct labeling like this keeps your audience's attention fixed on your graphic and helps them identify data quickly. While legends force the audience to do more work, because a legend is positioned away from the chart's data.
+
+### Data source references
+
+- 🖋️ [Set Up Data Sources](https://help.tableau.com/current/pro/desktop/en-us/datasource_prepare.htm)
+- 🖋️ [Join Your Data](https://help.tableau.com/current/pro/desktop/en-us/joining_tables.htm)
+- 🖋️ [Don’t Be Scared of Relationships - Tableau](https://help.tableau.com/v2020.2/pro/desktop/en-us/datasource_dont_be_scared.htm)
+- 🖋️ [How Relationships Differ from Joins](https://help.tableau.com/current/online/en-us/datasource_relationships_learnmorepage.htm)
+- 🖋️ [Blend Your Data](https://help.tableau.com/current/pro/desktop/en-us/multiple_connections.htm)
+- 🖋️ [Combining Multiple Date Fields | Tableau Software](https://kb.tableau.com/articles/howto/combining-start-and-end-dates-into-a-single-axis)
